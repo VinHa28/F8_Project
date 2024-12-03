@@ -1,20 +1,46 @@
+@use "../abstracts";
+
 %flexItemsCenter {
   display: flex;
   align-items: center;
 }
+
 .header {
   background-color: var(--header-bg-color);
   padding: 30px;
+  @include abstracts.breakpoint(sm) {
+    padding: 16px;
+  }
+  @include abstracts.breakpoint(lg) {
+    padding: 20px;
+  }
 }
+
 .top-bar {
   @extend %flexItemsCenter;
+  &__more {
+    display: none;
+    @include abstracts.breakpoint(lg) {
+      display: block;
+    }
+  }
 }
+
 .navbar {
   margin-left: 144px;
+
+  @include abstracts.breakpoint(lg) {
+    display: none;
+  }
+  @include abstracts.breakpoint(xl) {
+    margin-left: 50px;
+  }
+
   &__menu {
     @extend %flexItemsCenter;
     column-gap: 30px;
   }
+
   &__link {
     @extend %flexItemsCenter;
     column-gap: 6px;
@@ -31,6 +57,11 @@
 
   &__group {
     @extend %flexItemsCenter;
+
+    @include abstracts.breakpoint(md) {
+      display: none;
+    }
+
     justify-content: center;
 
     border-radius: 8px;
@@ -39,10 +70,22 @@
     height: 50px;
     min-width: 50px;
   }
+  &__group--single {
+    @include abstracts.breakpoint(lg) {
+      display: none;
+    }
+  }
 
   &__btn {
+    @extend %flexItemsCenter;
+
+    column-gap: 10px;
     padding: 13px 20px;
     cursor: pointer;
+
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.467;
   }
 
   &__group--single &__btn {
