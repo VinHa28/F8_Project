@@ -2,6 +2,7 @@ html.dark {
   --text-color: #fff;
   --icon-color: brightness(0) saturate(100%) invert(100%) sepia(0%)
     saturate(7485%) hue-rotate(49deg) brightness(102%) contrast(99%);
+  --body-bg-color: #292E39;
   --header-bg-color: #171c28;
   --top-action-group-bg-color: #292e39;
   --top-action-group-shadow: rgba(0, 0, 0, 0.2);
@@ -12,10 +13,17 @@ html {
   --text-color: #1a162e;
   --icon-color: brightness(0) saturate(100%) invert(6%) sepia(38%)
     saturate(1681%) hue-rotate(220deg) brightness(99%) contrast(94%);
-  --header-bg-color:#eee;
+  --body-bg-color: #fff;
+  --header-bg-color: #eee;
   --top-action-group-bg-color: #fff;
   --top-action-group-shadow: rgba(237, 237, 246, 0.2);
   --top-action-group-separate: #ededf6;
+}
+@media (max-width: 991.98px) {
+  html {
+    --header-bg-color: #fff;
+    --body-bg-color: #F6F6F6;
+  }
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -86,6 +94,7 @@ body {
   font-size: 1.6rem;
   font-family: "Gordita";
   color: var(--text-color);
+  background-color: var(--body-bg-color);
 }
 
 a {
@@ -1097,6 +1106,11 @@ input {
     display: block;
   }
 }
+@media (max-width: 767.98px) {
+  .top-bar {
+    justify-content: space-between;
+  }
+}
 
 .navbar {
   margin-left: 144px;
@@ -1124,6 +1138,11 @@ input {
 .top-action {
   margin-left: auto;
   gap: 20px;
+}
+@media (max-width: 767.98px) {
+  .top-action {
+    margin-left: 0;
+  }
 }
 .top-action__group {
   justify-content: center;
@@ -1174,7 +1193,13 @@ input {
 @media (max-width: 991.98px) {
   .logo {
     column-gap: 10px;
-    margin-left: 39px;
+    margin-left: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .logo {
+    column-gap: 10px;
+    margin-left: 0;
   }
 }
 .logo__title {

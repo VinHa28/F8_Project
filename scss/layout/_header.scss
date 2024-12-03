@@ -24,6 +24,9 @@
       display: block;
     }
   }
+  @include abstracts.breakpoint(md) {
+    justify-content: space-between;
+  }
 }
 
 .navbar {
@@ -54,7 +57,9 @@
   margin-left: auto;
   gap: 20px;
   @extend %flexItemsCenter;
-
+  @include abstracts.breakpoint(md) {
+    margin-left: 0;
+  }
   &__group {
     @extend %flexItemsCenter;
 
