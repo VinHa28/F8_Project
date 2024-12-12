@@ -22,12 +22,15 @@ button {
   outline: none;
   background-color: transparent;
 }
-
+a,
+img,
 button,
 textarea,
 input {
   font-family: inherit;
   color: inherit;
+  // Highlight on Touch device
+  // -webkit-tap-highlight-color: transparent;
 }
 
 .icon {
