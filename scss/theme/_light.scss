@@ -27,4 +27,14 @@ html {
   --sidebar-text-color: #1A162E;
   --sidebar-icon-filter: brightness(0) saturate(100%) invert(5%) sepia(18%) saturate(6158%) hue-rotate(233deg) brightness(95%) contrast(92%);
   --sidebar-shadow: rgba(200, 200, 200, 0.40);
+
+  // Cate-item
+  --cate-item-bg: #EEE;
+  @include abstracts.screen(md) {
+    --cate-item-bg: #fff;
+  }
+  --cate-item-thumb-bg: #fff;
+  --cate-item-title-color: #000;
+
+
 }
