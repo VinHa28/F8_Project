@@ -21,6 +21,7 @@ button {
   border: none;
   outline: none;
   background-color: transparent;
+  padding: 0;
 }
 a,
 img,
@@ -35,4 +36,12 @@ input {
 
 .icon {
   filter: var(--icon-color);
+}
+
+.multiline-ellipsis {
+  display: -webkit-box;           
+  -webkit-box-orient: vertical;  
+  overflow: hidden;              
+  text-overflow: ellipsis;       
+  -webkit-line-clamp: 2;         
 }

@@ -35,6 +35,15 @@ html.dark {
   --cate-item-thumb-bg: #292e39 ;
   --cate-item-title-color: #fff;
 
+  // Product card
+  --product-card-bg: #171C28;
+  --product-card-shadow: rgba(0, 0, 0, 0.20);
+
+  // Buttons
+  //Filter button
+  --filter-btn-bg: #171C28;
+  --filter-btn-color: #fff;
+  --filter-btn-icon-filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(2%) hue-rotate(98deg) brightness(117%) contrast(100%);
 
 
 }
