@@ -11,7 +11,7 @@ html {
   --top-action-group-shadow: rgba(237, 237, 246, 0.2);
   --top-action-group-separate: #ededf6;
 
-  @include abstracts.breakpoint(lg) {
+  @include abstracts.screen(lg) {
     --header-bg-color: #fff;
     --body-bg-color: #f6f6f6;
     --header-lg-shadow: rgba(237, 237, 246, 0.2);
