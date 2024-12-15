@@ -30,6 +30,8 @@ textarea,
 input {
   font-family: inherit;
   color: inherit;
+  outline: none;
+  padding: 0;
   // Highlight on Touch device
   // -webkit-tap-highlight-color: transparent;
 }

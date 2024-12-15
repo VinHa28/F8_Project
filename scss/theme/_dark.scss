@@ -39,11 +39,14 @@ html.dark {
   --product-card-bg: #171C28;
   --product-card-shadow: rgba(0, 0, 0, 0.20);
 
-  // Buttons
   //Filter button
   --filter-btn-bg: #171C28;
   --filter-btn-color: #fff;
   --filter-btn-icon-filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(2%) hue-rotate(98deg) brightness(117%) contrast(100%);
 
-
+  // Filter
+  --filter-bg: #292E39;
+  --filter-shadow: rgba(0, 0, 0, 0.40);
+  --filter-form-tag-bg: #171C28;
+  --filter-arrow-color: brightness(0) saturate(100%) invert(15%) sepia(7%) saturate(1867%) hue-rotate(184deg) brightness(91%) contrast(88%);
 }
