@@ -31,7 +31,7 @@
     <!-- Main -->
     <main>
       <!-- Slideshow -->
-      <section class="home__container">
+      <div class="home__container">
         <div class="slideshow">
           <div class="slideshow__inner">
             <div class="slideshow__item">
@@ -81,7 +81,7 @@
             <span class="slideshow__num">5</span>
           </div>
         </div>
-      </section>
+      </div>
       <!-- Browse Categories -->
       <section class="home__container">
         <h2 class="home__heading">Browse Categories</h2>
@@ -92,10 +92,10 @@
               <div class="cate-item__thumb">
                 <img src="./assets/img/category-item/item-1.png" alt="item 1" class="">
               </div>
-              <section class="cate-item__infor">
+              <div class="cate-item__infor">
                 <h3 class="cate-item__title">$24 - $150</h3>
                 <p class="cate-item__desc">New sumatra mandeling coffe blend</p>
-              </section>
+              </div>
             </article>
            </a>
           </li>
@@ -105,10 +105,10 @@
                 <div class="cate-item__thumb">
                   <img src="./assets/img/category-item/item-2.png" alt="item 2" class="">
                 </div>
-                <section class="cate-item__infor">
+                <div class="cate-item__infor">
                   <h3 class="cate-item__title">$37 - $160</h3>
                   <p class="cate-item__desc">Espresso arabica and robusta beans</p>
-                </section>
+                </div>
               </article>
             </a>
           </li>
@@ -118,10 +118,10 @@
                 <div class="cate-item__thumb">
                   <img src="./assets/img/category-item/item-3.png" alt="item 3" class="">
                 </div>
-                <section class="cate-item__infor">
+                <div class="cate-item__infor">
                   <h3 class="cate-item__title">$32 - $160</h3>
                   <p class="cate-item__desc">Lavazza top class whole bean coffee blend</p>
-                </section>
+                </div>
               </article>
             </a>
           </li>
@@ -148,11 +148,12 @@
                 <img src="./assets/img/product/product-1.png" alt="" class="product-card__thumb">
               </a>
               <!-- Like Button -->
-              <button class="like-btn like-btn--liked product-card__like-btn">
+              <button class="like-btn like-btn--liked product-card__like-btn"> 
+                <img src="./assets/icons/red-heart.svg" alt="icon" class="like-btn__icon--liked">
                 <img src="./assets/icons/heart.svg" alt="icon" class="like-btn__icon icon">
               </button>
             </div>
-            <section class="product-card__info">
+            <div class="product-card__info">
               <h3 class="product-card__title">
                 <a class="multiline-ellipsis" href="#!">Coffee Beans - Espresso Arabica and Robusta Beans</a>
               </h3>
@@ -164,7 +165,7 @@
                   <span class="product-card__score">4.3</span>
                 </div>
               </div>
-            </section>
+            </div>
           </article>
           
          </li>
@@ -176,11 +177,12 @@
                 <img src="./assets/img/product/product-2.png" alt="" class="product-card__thumb">
               </a>
               <!-- Like Button -->
-              <button class="like-btn like-btn--liked product-card__like-btn">
+              <button class="like-btn like-btn product-card__like-btn">
                 <img src="./assets/icons/heart.svg" alt="icon" class="like-btn__icon icon">
+                <img src="./assets/icons/red-heart.svg" alt="icon" class="like-btn__icon--liked">
               </button>
             </div>
-            <section class="product-card__info">
+            <div class="product-card__info">
               <h3 class="product-card__title">
                 <a class="multiline-ellipsis" href="#!">Lavazza Coffee Blends - Try the Italian Espresso</a>
               </h3>
@@ -192,7 +194,7 @@
                   <span class="product-card__score">3.4</span>
                 </div>
               </div>
-            </section>
+            </div>
           </article>
           
          </li>
@@ -206,9 +208,10 @@
               <!-- Like Button -->
               <button class="like-btn like-btn--liked product-card__like-btn">
                 <img src="./assets/icons/heart.svg" alt="icon" class="like-btn__icon icon">
+                <img src="./assets/icons/red-heart.svg" alt="icon" class="like-btn__icon--liked">
               </button>
             </div>
-            <section class="product-card__info">
+            <div class="product-card__info">
               <h3 class="product-card__title">
                 <a class="multiline-ellipsis" href="#!">Lavazza - Caffè Espresso Black Tin - Ground coffee</a>
               </h3>
@@ -220,7 +223,7 @@
                   <span class="product-card__score">5.0</span>
                 </div>
               </div>
-            </section>
+            </div>
           </article>
           
          </li>
@@ -232,11 +235,12 @@
                 <img src="./assets/img/product/product-4.png" alt="" class="product-card__thumb">
               </a>
               <!-- Like Button -->
-              <button class="like-btn like-btn--liked product-card__like-btn">
+              <button class="like-btn product-card__like-btn">
                 <img src="./assets/icons/heart.svg" alt="icon" class="like-btn__icon icon">
+                <img src="./assets/icons/red-heart.svg" alt="icon" class="like-btn__icon--liked">
               </button>
             </div>
-            <section class="product-card__info">
+            <div class="product-card__info">
               <h3 class="product-card__title">
                 <a class="multiline-ellipsis" href="#!">Qualità Oro Mountain Grown - Espresso Coffee Beans</a>
               </h3>
@@ -248,7 +252,7 @@
                   <span class="product-card__score">4.4</span>
                 </div>
               </div>
-            </section>
+            </div>
           </article>
           
          </li>
