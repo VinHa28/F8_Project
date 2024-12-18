@@ -6,7 +6,6 @@
   column-gap: 14px;
   @include abstracts.screen(lg) {
     column-gap: 10px;
-    margin-left: 40px;
   }
   @include abstracts.screen(md) {
     column-gap: 10px;

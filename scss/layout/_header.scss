@@ -18,6 +18,11 @@
     padding: 16px;
   }
 
+  &__logo {
+    @include abstracts.screen(lg) {
+      margin-left: 40px;
+    }
+  }
 }
 
 .top-bar {
