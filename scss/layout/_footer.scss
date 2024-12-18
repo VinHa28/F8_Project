@@ -41,7 +41,6 @@
 
     @include abstracts.screen(sm) {
       flex-direction: row;
-
     }
   }
 
@@ -136,5 +135,15 @@
     width: 14px;
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%)
       hue-rotate(72deg) brightness(99%) contrast(99%);
+  }
+
+  &__desc, &__copyright {
+    color: var(--footer-text-color);
+  }
+
+  &__copyright  {
+    @include abstracts.screen(md) {
+      text-align: center;
+    }
   }
 }

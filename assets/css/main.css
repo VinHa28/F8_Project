@@ -28,6 +28,8 @@ html.dark {
   --filter-shadow: rgba(0, 0, 0, 0.40);
   --filter-form-tag-bg: #171C28;
   --filter-arrow-color: brightness(0) saturate(100%) invert(15%) sepia(7%) saturate(1867%) hue-rotate(184deg) brightness(91%) contrast(88%);
+  --footer-bg-color: var(--header-bg-color);
+  --footer-text-color: #9e9da6;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -63,6 +65,7 @@ html {
   --filter-form-tag-bg: #F8F8FB;
   --filter-arrow-color: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(268deg) brightness(106%) contrast(101%);
   --footer-bg-color: var(--header-bg-color);
+  --footer-text-color: #1a162e;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1594,6 +1597,14 @@ input {
 .footer__social-img {
   width: 14px;
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7482%) hue-rotate(72deg) brightness(99%) contrast(99%);
+}
+.footer__desc, .footer__copyright {
+  color: var(--footer-text-color);
+}
+@media (max-width: 767.98px) {
+  .footer__copyright {
+    text-align: center;
+  }
 }
 
 .logo {
