@@ -196,6 +196,11 @@
 
   @include abstracts.screen(md) {
     margin-left: 0;
+
+    &__sign-up {
+      padding: 0 12px !important;
+      font-size: 1.5rem !important;
+    }
   }
 
   &__group {
@@ -269,4 +274,6 @@
   &__icon {
     filter: var(--sidebar-icon-filter);
   }
+
+  
 }

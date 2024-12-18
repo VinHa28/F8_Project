@@ -1,6 +1,11 @@
+@use "../abstracts";
+
 .form {
     &__group {
         margin-top: 30px;
+        @include abstracts.screen(md) {
+            margin-top: 20px;
+        }
     }
 
     &__text-input {
@@ -21,8 +26,10 @@
         flex: 1;
         height: 100%;
         font-size: 1.8rem;
-        font-weight: 500;
-        line-height: 1.444; /* 144.444% */
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
 
         &::placeholder {
             color: #D2D1D6;
@@ -41,6 +48,10 @@
     &__pull-right {
         margin-left: auto;
     }
+    &__input,  &__label-checkbox {
+        font-weight: 500;
+        line-height: 1.444; /* 144.444% */
+    }
 
     &__label-checkbox {
         display: flex;
@@ -48,8 +59,10 @@
         gap: 10px;
 
         color: #9E9DA8;
-        font-size: 1.8rem;
-        font-weight: 500;
-        line-height: 1.444; /* 144.444% */
+        font-size: 1.5rem;
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
     }
 }
