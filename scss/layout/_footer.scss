@@ -11,7 +11,8 @@
     @include abstracts.screen(lg) {
       grid-template-columns: repeat(4, 1fr);
       .footer__col:first-child {
-        grid-column: 1 / -1; /* Chiếm toàn bộ chiều ngang */
+        grid-column: 1 / -1; 
+        row-gap: 40px;
       }
     }
 
@@ -20,6 +21,7 @@
     }
     @include abstracts.screen(sm) {
       grid-template-columns: 1fr;
+      row-gap: 30px;
     }
   }
 
