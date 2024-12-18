@@ -2371,7 +2371,7 @@ input {
 }
 @media (max-width: 767.98px) {
   .footer__input {
-    font-size: 1.6px;
+    font-size: 1.6rem;
   }
 }
 .footer__heading {
