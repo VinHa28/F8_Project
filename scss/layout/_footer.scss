@@ -51,6 +51,10 @@
     border: 2px solid #d2d1d6;
     font-size: 1.5rem;
     font-weight: 500;
+
+    @include abstracts.screen(md) {
+      font-size: 1.6px;
+    }
   }
 
   &__heading {

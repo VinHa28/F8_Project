@@ -43,9 +43,13 @@
 
 // Buttons
 .btn {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 40px;
     padding: 0 20px;
-
+    
     background-color: #f8f8f8;
     font-size: 1.8rem;
     font-weight: 500;
