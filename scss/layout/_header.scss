@@ -21,6 +21,18 @@
   &__logo {
     @include abstracts.screen(lg) {
       margin-left: 40px;
+      column-gap: 10px;
+      &-title {
+        font-size: 1.8rem;
+      }
+      &-img {
+        width: 24px;
+      }
+    }
+
+    @include abstracts.screen(md) {
+      column-gap: 10px;
+      margin-left: 0;
     }
   }
 }

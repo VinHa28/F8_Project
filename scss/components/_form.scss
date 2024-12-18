@@ -1,10 +1,31 @@
 @use "../abstracts";
 
 .form {
+
+    &:has(:invalid) &__submit-btn{
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
     &__group {
         margin-top: 30px;
         @include abstracts.screen(md) {
             margin-top: 20px;
+        }
+    }
+
+    &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
+        .form__text-input {
+            border-color: #ed4337;
+            background-color: rgba($color: #ed4337, $alpha: 0.1);
+        }
+
+        .form__input-icon {
+            display: none;
+        }
+
+        .form__error, .form__input-icon--error {
+            display: block;
         }
     }
 
@@ -19,8 +40,17 @@
         &:focus-within {
             border-color: #77DAE6;
         }
-
     }
+
+    &__error {
+        text-align: left;
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-top: 10px;
+        color: #ed4337;
+        display: none;
+    }
+    
 
     &__input {
         flex: 1;
@@ -37,7 +67,13 @@
 
         &-icon {
             margin-left: 12px;
+            width: 20px;
+            &--error {
+                display: none;
+                animation: shake 0.3s;
+            }
         }
+
     }
 
     &__row {
@@ -54,15 +90,50 @@
     }
 
     &__label-checkbox {
+        margin-left: 29px;
+        position: relative;
         display: flex;
         align-items: center;
-        gap: 10px;
 
+        user-select: none;
         color: #9E9DA8;
         font-size: 1.5rem;
 
         @include abstracts.screen(md) {
             font-size: 1.4rem;
+        }
+
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            left: -29px;
+            transition: rotate 0.1s;
+        }
+        &::before {
+            width: 19px;
+            height: 19px;
+            border-radius: 5px;
+            border: 1.5px solid #9E9DA8;
+            transition: all 0.1s;
+        }
+       
+    }
+
+    &__label-checkbox:has(:checked) {
+        &::before {
+            border-color: #FFB700;
+            background-color: #FFB700;
+            
+        }
+
+        &::after {
+            width: 15px;
+            height: 8px;
+            border: 3px solid;
+            border-color: transparent transparent #fff #fff;
+            rotate: -45deg;
+            left: -27px;
+            top: 5px;
         }
     }
 }
