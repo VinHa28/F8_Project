@@ -55,6 +55,8 @@ html.dark {
   --footer-text-color: #9e9da6;
 
   // Auth
-  --auth-bg-color: #292E39;
-
+  --auth-content-bg: #292E39;
+  --auth-intro-bg: #171C28;
+  --auth-text: #B9BABE;
+  --auth-icon-filter: brightness(0) saturate(100%) invert(86%) sepia(7%) saturate(104%) hue-rotate(190deg) brightness(87%) contrast(89%);
 }

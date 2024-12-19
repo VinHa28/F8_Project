@@ -43,6 +43,7 @@ html {
   //Filter button
   --filter-btn-bg: #fff;
   --filter-btn-color: #6C6C72;
+
   // Filter
   --filter-bg: #fff;
   --filter-shadow: rgba(200, 200, 200, 0.40);
@@ -54,5 +55,10 @@ html {
   --footer-text-color: #1a162e;
 
   // Auth
-  --auth-bg-color: #fff;
+  --auth-content-bg: #fff;
+  --auth-intro-bg: var(--body-bg-color);
+  @include abstracts.screen(md) {
+    --auth-intro-bg: #fff;
+  }
+  --auth-icon-filter: brightness(0) saturate(100%) invert(11%) sepia(14%) saturate(1999%) hue-rotate(210deg) brightness(93%) contrast(101%);
 }

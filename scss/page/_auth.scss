@@ -20,6 +20,7 @@
         justify-content: center;
         gap: 50px;
         position: relative;
+        background-color: var(--auth-intro-bg);
 
         &-text {
             max-width: 412px;
@@ -42,7 +43,7 @@
     }
 
     &__content {
-        background-color: #fff; 
+        background-color: var(--auth-content-bg); 
 
         @include abstracts.screen(md) {
             overflow-y: auto;
@@ -66,6 +67,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
+            @include abstracts.screen(md) {
+                padding: 30px 0;
+            }
         }
     }
 
@@ -75,6 +80,7 @@
         font-size: 3rem;
         font-weight: 500;
         line-height: 1.467; /* 146.667% */
+        color: var(--auth-text);
 
         @include abstracts.screen(md) {
             margin-top: 2.2rem;
@@ -116,12 +122,20 @@
 
     &__btn-group {
         margin-top: 50px;
+        @include abstracts.screen(md) {
+            margin-top: 50px;
+        }
     }
 
     &__btn {
         width: 100%;
         &--outline {
             gap: 10px;
+            color: var(--auth-text);
+
+            & img {
+                filter: var(--auth-icon-filter);
+            }
         }
     }
 
@@ -135,8 +149,12 @@
         align-items: baseline;
         gap: 10px;
         @include abstracts.screen(md) {
-            margin-top: 56px;
+            margin-top: 40px;
         }
+    }
+
+    &__intro-text {
+        color: var(--auth-text);
     }
     
     &__intro-text, &__text, &__link--larger {
