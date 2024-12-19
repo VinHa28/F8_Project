@@ -2070,6 +2070,20 @@ input {
   top: 5px;
 }
 
+.message {
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-color);
+  text-align: left;
+  width: 100%;
+}
+.message--success {
+  background: rgba(40, 255, 122, 0.2);
+  border-bottom: 2px solid #46a05c;
+}
+
 .top-action__btn, .top-action__group, .top-action, .navbar__link, .navbar__menu, .top-bar {
   display: flex;
   align-items: center;
@@ -2532,6 +2546,7 @@ input {
   text-align: center;
 }
 .auth__intro-img {
+  width: var(--width);
   max-width: 100%;
 }
 .auth__intro-logo {
