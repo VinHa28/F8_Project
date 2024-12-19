@@ -2588,6 +2588,9 @@ input {
   margin-top: 10px;
   padding: 0 30px;
 }
+.auth__desc-sign-in {
+  padding: 0 20px;
+}
 .auth__desc, .auth__link {
   font-size: 1.5rem;
   font-weight: 500;
