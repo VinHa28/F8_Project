@@ -59,4 +59,26 @@ html.dark {
   --auth-intro-bg: #171C28;
   --auth-text: #B9BABE;
   --auth-icon-filter: brightness(0) saturate(100%) invert(86%) sepia(7%) saturate(104%) hue-rotate(190deg) brightness(87%) contrast(89%);
+  // Breadcrumbs
+  
+
+  // Product Detail
+  --product-detail-bg: #292E39;
+  --product-info-bg: #171C28;
+  --product-price-color: #fff;
+  --product-tag-bg: #292E39;
+  --product-tax-bg: #e1efda;
+
+  @include abstracts.screen(md) {
+    --product-detail-bg: #292E39;
+    --product-info-bg: #171C28;
+  }
+
+  // Breadcrumbs
+  --breadcrumbs-bg: #171C28;
+  --breadcrumbs-shadow: rgba(23, 28, 40, 0.20);
+
+  // Search bar
+  --search-bar-bg: #171C28;
+  
 }
