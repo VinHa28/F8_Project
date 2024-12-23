@@ -49,3 +49,11 @@ input {
   text-overflow: ellipsis;       
   -webkit-line-clamp: 2;         
 }
+
+i, em {
+  font-style: italic;
+}
+
+b, strong {
+  font-weight: 600;
+}
