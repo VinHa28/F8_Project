@@ -215,6 +215,13 @@
     }
   }
 
+  &__btn-wrap {
+    position: relative;
+    &:hover .action-dropdown {
+      display: block;
+    }
+  }
+
   &__group {
     @extend %flexItemsCenter;
 

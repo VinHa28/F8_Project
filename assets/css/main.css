@@ -12,6 +12,10 @@ html.dark {
   --dropdown-arrow-color: brightness(0) saturate(100%) invert(20%) sepia(4%) saturate(3536%) hue-rotate(181deg) brightness(97%) contrast(85%);
   --top-menu-border-color: #171C28;
   --cate-icon-color: brightness(0) saturate(100%) invert(86%) sepia(3%) saturate(109%) hue-rotate(184deg) brightness(114%) contrast(98%);
+  --top-action-dropdown-bg: #292E39;
+  --top-action-dropdown-shadow: rgba(23, 28, 40, 0.40);
+  --top-action-dropdown-text: #B9BABE;
+  --top-action-dropdown-arrow-filter: brightness(0) saturate(100%) invert(12%) sepia(5%) saturate(3787%) hue-rotate(184deg) brightness(90%) contrast(82%);
   --sidebar-bg: #292E39;
   --sidebar-text-color: #B9BABE;
   --sidebar-icon-filter: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(387%) hue-rotate(274deg) brightness(80%) contrast(82%);
@@ -68,6 +72,10 @@ html {
   --dropdown-bg-color: #fff;
   --dropdown-shadow: rgba(200, 200, 200, 0.4);
   --top-menu-border-color: #d2d1d6;
+  --top-action-dropdown-bg: #fff;
+  --top-action-dropdown-shadow: rgba(200, 200, 200, 0.40);
+  --top-action-dropdown-text: var(--text-color);
+  --top-action-dropdown-arrow-filter: brightness(0) saturate(100%) invert(95%) sepia(97%) saturate(14%) hue-rotate(213deg) brightness(104%) contrast(104%);
   --sidebar-bg: #fff;
   --sidebar-text-color: #1A162E;
   --sidebar-icon-filter: brightness(0) saturate(100%) invert(5%) sepia(18%) saturate(6158%) hue-rotate(233deg) brightness(95%) contrast(92%);
@@ -2344,6 +2352,115 @@ b, strong {
   background-color: #ebebeb;
 }
 
+.action-dropdown {
+  position: absolute;
+  top: 74px;
+  right: -60px;
+  width: min(500px, 100vw);
+  display: none;
+}
+.action-dropdown::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 50px;
+  width: 80%;
+  top: -28px;
+  right: 0;
+}
+.action-dropdown__inner {
+  position: relative;
+  padding: 30px;
+  border-radius: 20px;
+  background: var(--top-action-dropdown-bg);
+  box-shadow: 0px 40px 90px 20px var(--top-action-dropdown-shadow);
+}
+.action-dropdown__arrow {
+  position: absolute;
+  height: 20.5px;
+  top: -18px;
+  right: 80px;
+  filter: var(--top-action-dropdown-arrow-filter);
+}
+.action-dropdown__top {
+  margin-bottom: 20px;
+}
+.action-dropdown__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.action-dropdown__title, .action-dropdown__view-all, .action-dropdown__label, .action-dropdown__value, .action-dropdown__btn {
+  color: var(--top-action-dropdown-text);
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.45; /* 145.455% */
+}
+.action-dropdown__title {
+  font-size: 2.2rem;
+}
+.action-dropdown__title, .action-dropdown__label--bold, .action-dropdown__value--bold, .action-dropdown__btn {
+  font-weight: 500;
+}
+.action-dropdown__view-all {
+  color: #0071DC;
+}
+.action-dropdown__view-all:hover {
+  opacity: 0.7;
+}
+.action-dropdown__bottom {
+  margin: 20px 0;
+  border-top: 1px solid #D2D1D6;
+  border-bottom: 1px solid #D2D1D6;
+  padding: 20px 0;
+}
+.action-dropdown__row + .action-dropdown__row {
+  margin-top: 20px;
+}
+.action-dropdown__btn {
+  color: #171C28;
+  height: 50px;
+  width: 278px;
+  margin-left: auto;
+}
+
+.card-preview-item {
+  text-align: left;
+}
+.card-preview-item__list {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  margin-bottom: 10px;
+}
+.card-preview-item__img-wrap {
+  position: relative;
+  padding-top: 100%;
+  border: 1px solid #ebebeb;
+  border-radius: 6px;
+}
+.card-preview-item__thumb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.card-preview-item__title {
+  color: var(--top-action-dropdown-text);
+  margin-top: 10px;
+  margin-bottom: 6px;
+  font-size: 1.4rem;
+  line-height: 1.43; /* 142.857% */
+  font-weight: 400;
+}
+.card-preview-item__price {
+  color: var(--top-action-dropdown-text);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.67; /* 146.667% */
+}
+
 .top-action__btn, .top-action__group, .top-action, .navbar__link, .navbar__menu, .top-bar {
   display: flex;
   align-items: center;
@@ -2539,6 +2656,12 @@ b, strong {
     padding: 0 12px !important;
     font-size: 1.5rem !important;
   }
+}
+.top-action__btn-wrap {
+  position: relative;
+}
+.top-action__btn-wrap:hover .action-dropdown {
+  display: block;
 }
 .top-action__group {
   justify-content: center;

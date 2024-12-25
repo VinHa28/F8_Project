@@ -21,14 +21,19 @@ html {
   --dropdown-bg-color: #fff;
   --dropdown-shadow: rgba(200, 200, 200, 0.4);
   --top-menu-border-color: #d2d1d6;
-
+  
+  // Top action dropdown
+  --top-action-dropdown-bg: #fff;
+  --top-action-dropdown-shadow: rgba(200, 200, 200, 0.40);
+  --top-action-dropdown-text: var(--text-color);
+  --top-action-dropdown-arrow-filter: brightness(0) saturate(100%) invert(95%) sepia(97%) saturate(14%) hue-rotate(213deg) brightness(104%) contrast(104%);
   // Sidebar 
   --sidebar-bg: #fff;
   --sidebar-text-color: #1A162E;
   --sidebar-icon-filter: brightness(0) saturate(100%) invert(5%) sepia(18%) saturate(6158%) hue-rotate(233deg) brightness(95%) contrast(92%);
   --sidebar-shadow: rgba(200, 200, 200, 0.40);
 
-  // Cate-item
+  // Cate item
   --cate-item-bg: #EEE;
   @include abstracts.screen(md) {
     --cate-item-bg: #fff;
