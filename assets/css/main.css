@@ -48,6 +48,13 @@ html.dark {
   --breadcrumbs-shadow: rgba(23, 28, 40, 0.20);
   --search-bar-bg: #171C28;
   --review-card-bg: #171C28;
+  --cart-breadcrumbs-bg: #171C28;
+  --cart-item-border-color: #292E39;
+  --cart-info-bg: #171C28;
+  --cart-info-shadow: rgba(23, 28, 40, 0.20);
+  --gift-item-icon-bg: #292E39;
+  --cart-text-color: #B9BABE;
+  --cart-seach-icon-filter: brightness(0) saturate(100%) invert(98%) sepia(2%) saturate(2716%) hue-rotate(184deg) brightness(86%) contrast(70%);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -107,6 +114,13 @@ html {
   --breadcrumbs-shadow: rgba(237, 237, 246, 0.20);
   --search-bar-bg: #fff;
   --review-card-bg: #FAFAFD;
+  --cart-text-color: var(--text-color);
+  --cart-breadcrumbs-bg: #fff;
+  --cart-info-bg: #fff;
+  --cart-info-shadow: rgba(237, 237, 246, 0.20);
+  --gift-item-text-color: var(--text-color);
+  --gift-item-icon-bg: #f1ecfc;
+  --cart-item-border-color: #D2D1D6;
 }
 @media (max-width: 991.98px) {
   html {
@@ -2471,12 +2485,14 @@ b, strong {
 
 .cart-item {
   display: flex;
-  border-bottom: 1px solid #D2D1D6;
+  border-bottom: 1px solid var(--cart-item-border-color);
   padding: 30px 0;
+  gap: 30px;
 }
 @media (max-width: 767.98px) {
   .cart-item {
     padding: 16px 0;
+    gap: 16px;
   }
   .cart-item:last-child {
     border-bottom: none;
@@ -2609,6 +2625,10 @@ b, strong {
 }
 .cart-item__btn + .cart-item__btn {
   margin-left: 10px;
+}
+
+.cart-search-bar__icon {
+  filter: var(--cart-seach-icon-filter);
 }
 
 .top-action__btn, .top-action__group, .top-action, .navbar__link, .navbar__menu, .top-bar {
@@ -3497,9 +3517,10 @@ b, strong {
   display: flex;
   flex-direction: column;
   padding-bottom: 100px;
+  color: var(--cart-text-color);
 }
 .cart-main__breadcrumbs {
-  background-color: #fff;
+  background-color: var(--cart-breadcrumbs-bg);
 }
 
 .cart-container {
@@ -3514,8 +3535,8 @@ b, strong {
 .cart-info {
   padding: 30px;
   border-radius: 20px;
-  background: #FFF;
-  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  background: var(--cart-info-bg);
+  box-shadow: 0px 20px 60px 10px var(--cart-info-shadow);
 }
 @media (max-width: 767.98px) {
   .cart-info {
@@ -3617,8 +3638,7 @@ b, strong {
   justify-content: center;
   flex-shrink: 0;
   border-radius: 14px;
-  background: #f1ecfc;
-  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  background: var(--gift-item-icon-bg);
 }
 .gift-item__title {
   font-size: 1.8rem;

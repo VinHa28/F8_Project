@@ -92,4 +92,12 @@ html.dark {
   // Review card
   --review-card-bg: #171C28;
 
+  // Cart
+  --cart-breadcrumbs-bg: #171C28;
+  --cart-item-border-color: #292E39;
+  --cart-info-bg: #171C28;
+  --cart-info-shadow:  rgba(23, 28, 40, 0.20);
+  --gift-item-icon-bg: #292E39;
+  --cart-text-color: #B9BABE;
+  --cart-seach-icon-filter: brightness(0) saturate(100%) invert(98%) sepia(2%) saturate(2716%) hue-rotate(184deg) brightness(86%) contrast(70%);;
 }
