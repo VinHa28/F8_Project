@@ -55,13 +55,13 @@
     font-weight: 500;
     cursor: pointer;
     user-select: none;
+    white-space: nowrap;
 
     border-radius: 6px;
 
     &--text {
         background-color: transparent;
         font-weight: 400;
-        color: #9E9DA8;
     }
 
     &--primary {
