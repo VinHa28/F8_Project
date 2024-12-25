@@ -16,6 +16,7 @@ html.dark {
   --top-action-dropdown-shadow: rgba(23, 28, 40, 0.40);
   --top-action-dropdown-text: #B9BABE;
   --top-action-dropdown-arrow-filter: brightness(0) saturate(100%) invert(12%) sepia(5%) saturate(3787%) hue-rotate(184deg) brightness(90%) contrast(82%);
+  --top-action-dropdown--border-color: #171C28;
   --sidebar-bg: #292E39;
   --sidebar-text-color: #B9BABE;
   --sidebar-icon-filter: brightness(0) saturate(100%) invert(99%) sepia(0%) saturate(387%) hue-rotate(274deg) brightness(80%) contrast(82%);
@@ -76,6 +77,7 @@ html {
   --top-action-dropdown-shadow: rgba(200, 200, 200, 0.40);
   --top-action-dropdown-text: var(--text-color);
   --top-action-dropdown-arrow-filter: brightness(0) saturate(100%) invert(95%) sepia(97%) saturate(14%) hue-rotate(213deg) brightness(104%) contrast(104%);
+  --top-action-dropdown--border-color: #D2D1D6;
   --sidebar-bg: #fff;
   --sidebar-text-color: #1A162E;
   --sidebar-icon-filter: brightness(0) saturate(100%) invert(5%) sepia(18%) saturate(6158%) hue-rotate(233deg) brightness(95%) contrast(92%);
@@ -2410,9 +2412,15 @@ b, strong {
 }
 .action-dropdown__bottom {
   margin: 20px 0;
-  border-top: 1px solid #D2D1D6;
-  border-bottom: 1px solid #D2D1D6;
+  border-top: 1px solid var(--top-action-dropdown--border-color);
+  border-bottom: 1px solid var(--top-action-dropdown--border-color);
   padding: 20px 0;
+}
+.action-dropdown__separate {
+  height: 1px;
+  width: 100%;
+  background-color: var(--top-action-dropdown--border-color);
+  margin: 20px 0;
 }
 .action-dropdown__row + .action-dropdown__row {
   margin-top: 20px;
