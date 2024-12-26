@@ -53,7 +53,6 @@ html.dark {
   --cart-info-bg: #171C28;
   --cart-info-shadow: rgba(23, 28, 40, 0.20);
   --gift-item-icon-bg: #292E39;
-  --cart-text-color: #B9BABE;
   --cart-seach-icon-filter: brightness(0) saturate(100%) invert(98%) sepia(2%) saturate(2716%) hue-rotate(184deg) brightness(86%) contrast(70%);
   --dialog-bg: #353d4c;
   --dialog-shadow:rgba(23, 28, 40, 0.40);
@@ -116,7 +115,6 @@ html {
   --breadcrumbs-shadow: rgba(237, 237, 246, 0.20);
   --search-bar-bg: #fff;
   --review-card-bg: #FAFAFD;
-  --cart-text-color: var(--text-color);
   --cart-breadcrumbs-bg: #fff;
   --cart-info-bg: #fff;
   --cart-info-shadow: rgba(237, 237, 246, 0.20);
@@ -3575,7 +3573,6 @@ b, strong {
   display: flex;
   flex-direction: column;
   padding-bottom: 100px;
-  color: var(--cart-text-color);
 }
 .cart-main__breadcrumbs {
   background-color: var(--cart-breadcrumbs-bg);
