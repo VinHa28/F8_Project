@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
 
 <head>
   <meta charset="UTF-8" />
@@ -284,16 +284,16 @@
     </script>
   </footer>
 
-  <!-- Dialog -->
-   <div class="dialog hide" id="delete-confirm">
-    <div class="dialog__content">
-      <div class="dialog__text">Are you sure you want to delete?</div>
-      <div class="dialog__bottom">
-        <button class="btn btn--text dialog__btn js-toggle" toggle-target="#delete-confirm">Cancel</button>
-        <button class="btn btn--primary dialog__btn js-toggle" toggle-target="#delete-confirm">Confirm</button>
+  <!-- Dialog / Modal-->
+   <div class="modal hide" id="delete-confirm">
+    <div class="modal__content">
+      <div class="modal__text">Are you sure you want to delete?</div>
+      <div class="modal__bottom">
+        <button class="btn btn--text modal__btn js-toggle" toggle-target="#delete-confirm">Cancel</button>
+        <button class="btn btn--primary modal__btn js-toggle" toggle-target="#delete-confirm">Confirm</button>
       </div>
     </div>
-    <div class="dialog__overlay js-toggle" toggle-target="#delete-confirm"></div>
+    <div class="modal__overlay js-toggle" toggle-target="#delete-confirm"></div>
    </div>
 </body>
 
