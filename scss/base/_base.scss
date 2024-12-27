@@ -36,6 +36,10 @@ textarea:-webkit-autofill:hover {
   -webkit-text-fill-color: var(--text-color);
   caret-color: var(--text-color);
 }
+
+input[type="checkbox" i] {
+  margin: 0;
+}
 a,
 img,
 button,
@@ -70,3 +74,5 @@ i, em {
 b, strong {
   font-weight: 600;
 }
+
+

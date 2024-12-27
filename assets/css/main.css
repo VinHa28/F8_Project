@@ -254,6 +254,10 @@ textarea:-webkit-autofill:hover {
   caret-color: var(--text-color);
 }
 
+input[type=checkbox i] {
+  margin: 0;
+}
+
 a,
 img,
 button,
@@ -2016,6 +2020,11 @@ b, strong {
     margin-top: 20px;
   }
 }
+.form__group--inline {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__text-input {
   border-color: #ed4337;
   background-color: rgba(237, 67, 55, 0.1);
@@ -2661,8 +2670,12 @@ b, strong {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 0;
   font-weight: 500;
+}
+.cart-item__btn.btn--text {
+  padding: 0;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 @media (max-width: 767.98px) {
   .cart-item__btn {
@@ -3695,9 +3708,12 @@ b, strong {
 }
 .cart-info__heading, .cart-info__sub-heading {
   margin-bottom: 30px;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 700;
   line-height: 1.41667; /* 141.667% */
+}
+.cart-info__heading--no-margin, .cart-info__sub-heading--no-margin {
+  margin: 0;
 }
 @media (max-width: 767.98px) {
   .cart-info__heading, .cart-info__sub-heading {
@@ -3705,6 +3721,9 @@ b, strong {
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 1.5; /* 150% */
+  }
+  .cart-info__heading--no-margin, .cart-info__sub-heading--no-margin {
+    margin: 0;
   }
 }
 .cart-info__sub-heading {
@@ -3775,7 +3794,7 @@ b, strong {
 .cart-info__btn {
   margin-top: 30px;
   height: 50px;
-  font-size: 22px;
+  font-size: 2rem;
 }
 @media (max-width: 767.98px) {
   .cart-info__btn {
@@ -3880,6 +3899,8 @@ b, strong {
 }
 .address-card__checkbox-input {
   appearance: none;
+  width: 20px;
+  height: 20px;
 }
 .address-card__checkbox-input:checked::before {
   content: url("../icons/checkbox-checked.svg");
@@ -3943,6 +3964,66 @@ b, strong {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.payment-item {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  gap: 20px;
+  background: #F6F6F6;
+}
+.payment-item__content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.payment-item__right {
+  margin-left: auto;
+}
+.payment-item__link {
+  color: #0071dc;
+}
+.payment-item__link:hover {
+  text-decoration: underline;
+}
+.payment-item__img {
+  width: 70px;
+  height: 54px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+}
+.payment-item__cost {
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+  color: #9e9da8;
+}
+.payment-item__checkbox {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 14px;
+}
+.payment-item__checkbox-input:checked + .payment-item__cost {
+  color: inherit;
+}
+
+.payment-form {
+  margin-top: 30px;
+}
+.payment-form__input-wrap {
+  margin-bottom: 30px;
+}
+.payment-form__label {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.444; /* 144.444% */
 }
 
 /*# sourceMappingURL=main.css.map */
