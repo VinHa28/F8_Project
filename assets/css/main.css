@@ -2806,6 +2806,10 @@ b, strong {
 .cart-item__btn-icon {
   filter: brightness(0) saturate(100%) invert(62%) sepia(8%) saturate(11%) hue-rotate(226deg) brightness(100%) contrast(96%);
 }
+.cart-item__btn-icon--red {
+  margin-top: 8px;
+  margin-right: -10px;
+}
 .cart-item__btn + .cart-item__btn {
   margin-left: 10px;
 }

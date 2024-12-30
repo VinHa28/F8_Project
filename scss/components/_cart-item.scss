@@ -169,6 +169,11 @@
 
         &-icon {
             filter: brightness(0) saturate(100%) invert(62%) sepia(8%) saturate(11%) hue-rotate(226deg) brightness(100%) contrast(96%);
+            
+            &--red {
+              margin-top: 8px;  
+              margin-right: -10px;
+            }
         }
 
         
