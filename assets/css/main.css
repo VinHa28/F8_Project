@@ -56,6 +56,7 @@ html.dark {
   --cart-seach-icon-filter: brightness(0) saturate(100%) invert(98%) sepia(2%) saturate(2716%) hue-rotate(184deg) brightness(86%) contrast(70%);
   --modal-bg: #353d4c;
   --modal-shadow:rgba(23, 28, 40, 0.40);
+  --modal-select-hover-bg: #333;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -123,6 +124,7 @@ html {
   --cart-item-border-color: #D2D1D6;
   --modal-bg: #fff;
   --modal-shadow: rgba(237, 237, 246, 0.2);
+  --modal-select-hover-bg: #ebebeb;
 }
 @media (max-width: 991.98px) {
   html {
@@ -2042,6 +2044,107 @@ b, strong {
 .form__text-input {
   height: 50px;
   padding: 0 12px;
+  position: relative;
+}
+.form__select-dialog {
+  position: absolute;
+  bottom: 52px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  max-height: 380px;
+  background-color: var(--modal-bg);
+  border: 1px solid #d1d2d6;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  box-shadow: 0 0 5px var(--modal-shadow);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  translate: 0 8px;
+  transition: 0.1s;
+}
+@media (max-width: 575.98px) {
+  .form__select-dialog {
+    position: fixed;
+    max-width: initial;
+    max-height: initial;
+    inset: 0;
+    border-radius: 0;
+    padding: 10px;
+  }
+}
+.form__select-dialog.show {
+  opacity: 1;
+  visibility: visible;
+  translate: 0;
+}
+.form__dialog-heading {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 5px;
+}
+.form__close-dialog {
+  font-size: 3rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 2px 18px;
+  opacity: 0.8;
+}
+.form__search {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  border-bottom: 1px solid #d1d2d6;
+  height: 38px;
+  padding: 0 20px;
+}
+@media (max-width: 991.98px) {
+  .form__search {
+    height: 42px;
+  }
+}
+@media (max-width: 575.98px) {
+  .form__search {
+    margin: 10px 20px 0;
+    padding: 0 14px;
+    border: 1px solid;
+    border-radius: 8px;
+  }
+}
+.form__search-input {
+  flex-grow: 1;
+  font-size: 1.6rem;
+  height: 100%;
+}
+.form__search-icon {
+  width: 16px;
+  margin-left: 10px;
+}
+.form__options-list {
+  flex: 1;
+  margin-top: 8px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.form__option {
+  padding: 8px 20px;
+  font-size: 1.4rem;
+}
+@media (max-width: 991.98px) {
+  .form__option {
+    padding: 14px 20px;
+  }
+}
+.form__option--current {
+  background-color: rgba(255, 183, 0, 0.7);
+  font-weight: 500;
+}
+.form__option:not(.form__option--current):hover {
+  background-color: var(--modal-select-hover-bg);
+  cursor: pointer;
 }
 .form__text-area {
   padding: 12px;

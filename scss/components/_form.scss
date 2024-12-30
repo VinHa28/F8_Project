@@ -44,6 +44,115 @@
     &__text-input{
         height: 50px;
         padding: 0 12px;
+        position: relative;
+    }
+
+    &__select-dialog{
+        position: absolute;
+        bottom: 52px;
+        left: 10px;
+        display: flex;
+        flex-direction: column;
+        max-height: 380px;
+        background-color: var(--modal-bg);
+        border: 1px solid #d1d2d6;
+        border-radius: 10px;
+        padding-bottom: 10px;
+        box-shadow: 0 0 5px var(--modal-shadow);
+        z-index: 1;
+        
+        opacity: 0;
+        visibility: hidden;
+        translate: 0 8px;
+        transition: 0.1s;
+        
+        @include abstracts.screen(sm) {
+            position: fixed;
+            max-width: initial;
+            max-height: initial;
+            inset: 0;
+            border-radius: 0;
+            padding: 10px;
+        }
+        &.show {
+            opacity: 1;
+            visibility: visible;
+            translate: 0;
+        }
+    }
+
+
+    &__dialog-heading {
+        font-size: 1.6rem;
+        font-weight: 500;
+        text-align: center;
+        padding: 5px;
+    }
+
+    &__close-dialog {
+        font-size: 3rem;
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 2px 18px;
+        opacity: 0.8;
+    }
+
+    &__search {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        border-bottom: 1px solid #d1d2d6;
+
+        height: 38px;
+        padding: 0 20px;
+        @include abstracts.screen(lg) {
+            height: 42px;
+        }
+
+        @include abstracts.screen(sm) {
+            margin: 10px 20px 0;
+            padding: 0 14px;
+            border: 1px solid;
+            border-radius: 8px;
+
+        }
+        &-input {
+            flex-grow: 1;
+            font-size: 1.6rem;
+            height: 100%;
+        }
+
+        &-icon {
+            width: 16px;
+            margin-left: 10px;
+        }
+    }
+
+    &__options-list{
+        flex: 1;
+        margin-top: 8px;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    &__option {
+        padding: 8px 20px;  
+        font-size: 1.4rem;
+
+        @include abstracts.screen(lg) {
+            padding: 14px 20px;  
+        }
+
+        &--current {
+            background-color:  rgba($color: #FFB700, $alpha: 0.7);
+            font-weight: 500;
+        }
+
+        &:not(&--current):hover {
+            background-color: var(--modal-select-hover-bg);
+            cursor: pointer;
+        }
     }
 
     &__text-area {
