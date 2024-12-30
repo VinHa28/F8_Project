@@ -57,6 +57,8 @@ html.dark {
   --modal-bg: #353d4c;
   --modal-shadow:rgba(23, 28, 40, 0.40);
   --modal-select-hover-bg: #333;
+  --payment-item-bg: #292E39;
+  --payment-item-img-shadow: none;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -125,6 +127,8 @@ html {
   --modal-bg: #fff;
   --modal-shadow: rgba(237, 237, 246, 0.2);
   --modal-select-hover-bg: #ebebeb;
+  --payment-item-bg: #F6F6F6;
+  --payment-item-img-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.20);
 }
 @media (max-width: 991.98px) {
   html {
@@ -4223,7 +4227,7 @@ b, strong {
   padding: 20px;
   border-radius: 20px;
   gap: 20px;
-  background: #F6F6F6;
+  background: var(--payment-item-bg);
 }
 .payment-item__content {
   display: flex;
@@ -4261,7 +4265,7 @@ b, strong {
   height: 54px;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  box-shadow: var(--payment-item-img-shadow);
 }
 @media (max-width: 575.98px) {
   .payment-item__img {
