@@ -80,6 +80,16 @@
         }
     }
 
+    &__desc {
+        margin-top: 6px;
+        margin-bottom: 30px;
+        font-size: 1.5rem;
+        line-height: 1.467; /* 146.667% */
+    }
+
+    &__check-all {
+        margin-bottom: 30px;
+    }
 
     &__bottom {
         margin-top: 30px;

@@ -4,7 +4,6 @@
     display: flex;
     border-bottom: 1px solid var(--cart-item-border-color);
     padding: 30px 0;
-    gap: 30px;
 
     @include abstracts.screen(md) {
         padding: 16px 0;
@@ -26,9 +25,11 @@
             height: 100px;
         }
 
-        @include abstracts.screen(md) {
-            height: 100px;
+        @include abstracts.screen(sm) {
+            height: 60px;
         }
+
+
     }
 
     &__content {
@@ -78,15 +79,33 @@
         color: #67B044;
     }
 
-    &__control {
+    &__input-wrap {
         display: flex;
         align-items: center;
         column-gap: 20px;
         min-height: 44px;
         margin-top: auto;
 
-        &--md-horizontal {
-            @include abstracts.screen(md) {
+        @include abstracts.screen(md) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+    }
+
+    &__control  {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+        min-height: 44px;
+        margin-top: auto;
+
+        &-wrap {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;
+
+            @include abstracts.screen(lg) {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 10px;
