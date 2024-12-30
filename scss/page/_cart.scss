@@ -24,10 +24,17 @@
     background: var(--cart-info-bg);
     box-shadow: 0px 20px 60px 10px var(--cart-info-shadow);
 
+    & + & {
+        margin-top: 30px;
+    }
     @include abstracts.screen(md) {
         padding: 16px;
+        & + & {
+            margin-top: 20px;
+        }
     }
 
+    
 
     &__list {
         display: flex;
@@ -65,6 +72,12 @@
     &__sub-heading {
         font-size: 1.8rem;
         line-height: 1.44; /* 144.444% */
+
+        @include abstracts.screen(md) {
+            &--smaller  {
+                font-size: 1.5rem;
+            }
+        }
     }
 
 
@@ -143,6 +156,7 @@
         margin-top: 30px;
         height: 50px;
         font-size: 2rem;
+        width: 100%;
 
         @include abstracts.screen(md) {
             height: 46px;
@@ -199,12 +213,20 @@
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 1.144; /* 144.444% */
+
+        @include abstracts.screen(md) {
+            font-size: 1.6rem;
+        }
     }
 
     &__desc {
         margin-top: 4px;
         font-size: 1.5rem;
         line-height: 1.467; /* 146.667% */
+
+        @include abstracts.screen(md) {
+            font-size: 1.4rem;
+        }
     }
 
     &__btn {
@@ -345,14 +367,29 @@
         display: flex;
         align-items: center;
         flex: 1;
+
+        @include abstracts.screen(sm) {
+            flex-direction: column;
+            align-items: flex-start;
+            row-gap: 18px;
+        }
     }
     
     &__right {
         margin-left: auto;
+        @include abstracts.screen(sm) {
+            &--sm-left {
+                margin-left: 0;
+            }
+        }
     }
 
     &__link {
         color: #0071dc;
+
+        @include abstracts.screen(md) {
+            font-size: 1.5rem;
+        }
         &:hover {
             text-decoration: underline;
         }
@@ -364,6 +401,10 @@
         object-fit: cover;
         border-radius: 10px;
         box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.20);
+
+        @include abstracts.screen(sm) {
+            align-self: flex-start;
+        }
     }
     &__cost {
         font-size: 1.8rem;
@@ -387,6 +428,14 @@
 .payment-form {
     margin-top: 30px;
 
+    @include abstracts.screen(md) {
+        &__input {
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1.43; /* 142.857% */
+        }
+    }
+
     &__input-wrap {
         margin-bottom: 30px;
     }
@@ -397,5 +446,13 @@
         font-size: 1.8rem;
         font-weight: 500;
         line-height: 1.444; /* 144.444% */
+
+        @include abstracts.screen(md) {
+            margin-bottom: 10px;
+            font-size: 1.6rem;
+            line-height: 1.5; /* 150% */
+        }
     }
+
+    
 }
