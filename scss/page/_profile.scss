@@ -32,6 +32,12 @@
             font-size: 2.4rem;
             font-weight: 700;
             line-height: 1.42; /* 141.667% */
+
+            &-link {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
         }
 
         &__desc {
@@ -51,6 +57,30 @@
         }
     }
     
+}
+
+.profile__form {
+    &-control {
+        margin-top: 30px;
+        justify-content: flex-end;
+    }
+
+    &-btn {
+        font-weight: 500;
+        line-height: 1.5; /* 150% */
+        font-size: 1.6rem;
+    }
+    &-label {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+        font-weight: 500;
+        line-height: 1.4444; /* 144.444% */
+
+        &--bottom{
+            margin-bottom: 10px;
+        }
+    }
 }
 
 .profile-user {

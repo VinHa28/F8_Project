@@ -33,8 +33,8 @@
       <!-- Profile Content -->
       <div class="profile-container">
         <div class="row gy-xl-3">
-
-          <div class="col-3">
+          <!-- User -->
+          <div class="col-3 col-xl-4 col-lg-5 col-md-12">
             <div class="profile-info profile-info--no-padding">
               <aside class="profile__sidebar">
                 <div class="profile-user">
@@ -144,15 +144,14 @@
               </aside>
             </div>
           </div>
-
-          <div class="col-9">
+          <div class="col-9 col-xl-8 col-lg-7 col-md-12">
             <div class="profile-info">
-              <div class="row gy-3">
+              <div class="row gy-3 gy-md-2">
                 <!-- My Wallet -->
                 <div class="col-12">
                   <h2 class="profile-info__heading">My Wallet</h2>
                   <p class="profile-info__desc">Payment methods</p>
-                  <div class="row row-cols-3 row-cols-xl-2">
+                  <div class="row row-cols-3 row-cols-xl-2 row-cols-lg-1 gy-md-2">
                       <!-- Payment Card 1 -->
                       <div class="col">
                         <article class="payment-card" style="--background-color: #1E2E69;">
@@ -205,7 +204,7 @@
                       </div>
                       <!-- Payment Card 1 -->
                       <div class="col">
-                        <a href="#!" class="new-card">
+                        <a href="./add-new-card.html" class="new-card">
                           <img src="./assets/icons/plus.svg" alt="" class="new-card__icon icon">
                           <p class="new-card__text">Add New Card</p>
                         </a>
@@ -217,7 +216,7 @@
                   <h2 class="profile-info__heading">Account info</h2>
                   <p class="profile-info__desc">Addresses, contact information and password</p>
 
-                  <div class="row row-cols-2 g-3">
+                  <div class="row row-cols-2 g-3 row-cols-xl-1 gy-md-2">
                     <!-- Account info 1 -->
                     <div class="col">
                       <a href="#!">
@@ -240,8 +239,8 @@
                             <img src="./assets/icons/phone.svg" alt="" class="icon">
                           </div>
                           <div>
-                            <h3 class="account-info__title">Email Address</h3>
-                            <p class="account-info__desc">vinhhv28@gmail.com</p>
+                            <h3 class="account-info__title">Phone number</h3>
+                            <p class="account-info__desc">+981228204</p>
                           </div>
                         </article>
                       </a>
@@ -254,8 +253,8 @@
                             <img src="./assets/icons/address.svg" alt="" class="icon">
                           </div>
                           <div>
-                            <h3 class="account-info__title">Email Address</h3>
-                            <p class="account-info__desc">vinhhv28@gmail.com</p>
+                            <h3 class="account-info__title">Add an address </h3>
+                            <p class="account-info__desc">Soc Son District, Hanoi, Vietnam</p>
                           </div>
                         </article>
                       </a>
@@ -267,83 +266,38 @@
                   <h2 class="profile-info__heading">Lists</h2>
                   <p class="profile-info__desc">2 items - Primary</p>
 
-                  <article class="cart-item">
-                    <a href="./product-detail.html">
-                      <img src="./assets/img/product/product-1.png" alt="" class="cart-item__thumb">
-                    </a>
-                    <div class="cart-item__content">
-                      <div class="cart-item__content-left">
-                        <h3 class="cart-item__title">
+                  <!-- Favorite Item 1 -->
+                  <article class="favorite-item">
+                    <img src="./assets/img/product/product-1.png" alt="" class="favorite-item__thumb">
+                    <div class="favorite-item__content">
+                        <h3 class="favorite-item__title">
                           <a href="./product-detail.html">Coffee Beans - Espresso Arabica and Robusta Beans</a>
                         </h3>
-                        <p class="cart-item__price-wrap">
-                          $47.00 | <span class="cart-item__status">In Stock</span>
-                        </p>
-                        <div class="cart-item__control cart-item__control--md-horizontal">
-                          <div class="cart-item__input">
-                            LavAzza
-                            <img src="./assets/icons/arrow-down-2.svg" alt="" class="icon">
-                          </div>
-                          <div class="cart-item__input">
-                            <button class="cart-item__input-btn">
-                              <img src="./assets/icons/minus.svg" alt="" class="icon">
-                            </button>
-                            1
-                            <button class="cart-item__input-btn">
-                              <img src="./assets/icons/plus.svg" alt="" class="icon">
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="cart-item__content-right">
-                        <p class="cart-item__total">$47.00</p>
-                        <div class="cart-item__control">
-                          <button class="btn btn--primary btn--rounded cart-item__btn">
-                            Check Out
+                        <div class="favorite-item__control">
+                          <p class="favorite-item__price">$47.00</p>
+                          <button class="btn btn--primary btn--rounded favorite-item__btn">
+                            Add to cart
                           </button>
                         </div>
-                      </div>
                     </div>
                   </article>
 
-                  <article class="cart-item">
-                    <a href="./product-detail.html">
-                      <img src="./assets/img/product/product-1.png" alt="" class="cart-item__thumb">
-                    </a>
-                    <div class="cart-item__content">
-                      <div class="cart-item__content-left">
-                        <h3 class="cart-item__title">
-                          <a href="./product-detail.html">Coffee Beans - Espresso Arabica and Robusta Beans</a>
+                  <!-- Favorite Item 2 -->
+                  <article class="favorite-item">
+                    <img src="./assets/img/product/product-2.png" alt="" class="favorite-item__thumb">
+                    <div class="favorite-item__content">
+                        <h3 class="favorite-item__title">
+                          <a href="./product-detail.html">Lavazza Coffee Blends - Try the Italian Espresso</a>
                         </h3>
-                        <p class="cart-item__price-wrap">
-                          $47.00 | <span class="cart-item__status">In Stock</span>
-                        </p>
-                        <div class="cart-item__control cart-item__control--md-horizontal">
-                          <div class="cart-item__input">
-                            LavAzza
-                            <img src="./assets/icons/arrow-down-2.svg" alt="" class="icon">
-                          </div>
-                          <div class="cart-item__input">
-                            <button class="cart-item__input-btn">
-                              <img src="./assets/icons/minus.svg" alt="" class="icon">
-                            </button>
-                            1
-                            <button class="cart-item__input-btn">
-                              <img src="./assets/icons/plus.svg" alt="" class="icon">
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="cart-item__content-right">
-                        <p class="cart-item__total">$47.00</p>
-                        <div class="cart-item__control">
-                          <button class="btn btn--primary btn--rounded cart-item__btn">
-                            Check Out
+                        <div class="favorite-item__control">
+                          <p class="favorite-item__price">$53.00</p>
+                          <button class="btn btn--primary btn--rounded favorite-item__btn">
+                            Add to cart
                           </button>
                         </div>
-                      </div>
                     </div>
                   </article>
+
                  </div>
               </div>
             </div>
