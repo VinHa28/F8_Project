@@ -173,7 +173,7 @@
                       <div class="form__group profile__form-group">
                         <label for="lastName" class="form__label profile__form-label">Last Name</label>
                         <div class="form__text-input">
-                          <input type="text" name="lastName" id="lastName" class="form__input" placeholder="Last Name" required/>
+                          <input pattern="[A-Za-z]+" type="text" name="lastName" id="lastName" class="form__input" placeholder="Last Name" required/>
                           <img src="./assets/icons/form__error.svg" alt="" class="form__input-icon form__input-icon--error" />
                         </div>
                         <p class="form__error">The name can only contain letters!</p>
@@ -188,7 +188,7 @@
                           <input pattern="\d{16}" type="text" name="cardNumber" id="cardNumber" class="form__input" placeholder="Card Number" required/>
                           <img src="./assets/icons/form__error.svg" alt="" class="form__input-icon form__input-icon--error" />
                         </div>
-                        <p class="form__error">The card number must be numbers</p>
+                        <p class="form__error">The card number is a string 16 numbers!</p>
                       </div>
 
                       <!-- Expiration Date -->
@@ -207,7 +207,7 @@
                       <div class="form__group profile__form-group">
                         <label for="cvv" class="form__label profile__form-label">CVV</label>
                         <div class="form__text-input">
-                          <input pattern="\d" type="text" name="cvv" id="cvv" class="form__input" placeholder="123" required/>
+                          <input pattern="\d+" type="text" name="cvv" id="cvv" class="form__input" placeholder="123" required/>
                           <img src="./assets/icons/form__error.svg" alt="" class="form__input-icon form__input-icon--error" />
                         </div>
                         <p class="form__error">The CVV must be numbers!</p>
