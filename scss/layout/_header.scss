@@ -261,6 +261,23 @@
     background-color: var(--top-action-group-separate);
   }
 
+  &__user {
+    position: relative;
+
+    &:hover .action-dropdown {
+      display: block;
+    }
+  }
+
+  &__dropdown {
+    right: 0 !important;
+    width: min(300px, 100vw);
+    &-arrow {
+      right: 15px;
+      top: -14px;
+    }
+  }
+
   &__avatar {
     width: 50px;
     height: 50px;
@@ -292,7 +309,52 @@
 
   &__icon {
     filter: var(--sidebar-icon-filter);
+  } 
+}
+
+
+.user-menu {
+  text-align: left;
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    line-height: 1.4444;
   }
 
-  
+  &__avatar {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  &__name {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  &__list {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  &__separate {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--top-action-group-separate);
+  }
+
+  &__icon{
+    width: 15 px;
+  }
 }
