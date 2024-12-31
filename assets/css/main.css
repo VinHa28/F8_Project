@@ -133,7 +133,7 @@ html {
   --modal-select-hover-bg: #ebebeb;
   --payment-item-bg: #F6F6F6;
   --profile-info-bg: #fff;
-  --profile-info-shadow: rgba(23, 28, 40, 0.20);
+  --profile-info-shadow: rgba(237, 237, 246, 0.20);
   --account-info-bg: #F6F6F6;
   --account-info-icon-bg: #fff;
 }
@@ -4588,7 +4588,7 @@ b, strong {
   border-radius: 6px;
 }
 .profile-menu__link:hover {
-  background: #ebebeb;
+  background: rgba(0, 0, 0, 0.2);
 }
 .profile-menu__link-icon {
   width: 24px;

@@ -172,7 +172,7 @@
         transition: 0.2s;
         border-radius: 6px;
         &:hover {
-            background: #ebebeb;
+            background: rgba($color: #000000, $alpha: 0.2);
         }
 
         &-icon {
