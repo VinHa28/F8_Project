@@ -1635,7 +1635,7 @@ b, strong {
   gap: 20px;
   border-radius: 16px;
   background: var(--cate-item-bg);
-  padding: 20px 26px;
+  padding: 20px;
   height: 100%;
 }
 @media (max-width: 1199.98px) {
@@ -1652,8 +1652,8 @@ b, strong {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 116px;
-  height: 116px;
+  width: 100px;
+  height: 100px;
   background-color: var(--cate-item-thumb-bg);
   border-radius: 8px;
   overflow: hidden;
@@ -2098,7 +2098,7 @@ b, strong {
   border-color: #77DAE6;
 }
 .form__text-input {
-  height: 50px;
+  height: 48px;
   padding: 0 12px;
   position: relative;
 }
@@ -3168,7 +3168,7 @@ b, strong {
 
 .header {
   background-color: var(--header-bg-color);
-  padding: 30px;
+  padding: 16px;
 }
 @media (max-width: 991.98px) {
   .header {
