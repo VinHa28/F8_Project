@@ -59,6 +59,10 @@ html.dark {
   --modal-select-hover-bg: #333;
   --payment-item-bg: #292E39;
   --payment-item-img-shadow: none;
+  --profile-info-bg: #171C28;
+  --profile-info-shadow: rgba(23, 28, 40, 0.20);
+  --account-info-bg: #292E39;
+  --account-info-icon-bg: #171C28;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -128,6 +132,10 @@ html {
   --modal-shadow: rgba(237, 237, 246, 0.2);
   --modal-select-hover-bg: #ebebeb;
   --payment-item-bg: #F6F6F6;
+  --profile-info-bg: #fff;
+  --profile-info-shadow: rgba(23, 28, 40, 0.20);
+  --account-info-bg: #F6F6F6;
+  --account-info-icon-bg: #fff;
 }
 @media (max-width: 991.98px) {
   html {
@@ -3020,7 +3028,7 @@ b, strong {
   gap: 10px;
   padding: 10px;
   border-radius: 10px;
-  background: #F6F6F6;
+  background: var(--account-info-bg);
 }
 .account-info__icon {
   display: flex;
@@ -3029,7 +3037,7 @@ b, strong {
   justify-content: center;
   gap: 10px;
   border-radius: 8px;
-  background-color: #fff;
+  background-color: var(--account-info-icon-bg);
 }
 .account-info__title {
   font-size: 1.5rem;
@@ -4437,8 +4445,8 @@ b, strong {
 .profile-info {
   padding: 30px;
   border-radius: 20px;
-  background: var(--Secondary-Color-Background, #FFF);
-  box-shadow: 0px 20px 60px 10px rgba(237, 237, 246, 0.2);
+  background: var(--profile-info-bg);
+  box-shadow: 0px 20px 60px 10px var(--profile-info-shadow);
 }
 @media (max-width: 767.98px) {
   .profile-info {
@@ -4461,6 +4469,12 @@ b, strong {
   align-items: center;
   gap: 10px;
 }
+@media (max-width: 767.98px) {
+  .profile-info__heading-link {
+    font-size: 1.8rem;
+    line-height: 1.4444; /* 144.444% */
+  }
+}
 .profile-info__desc {
   font-size: 15px;
   font-weight: 400;
@@ -4472,9 +4486,30 @@ b, strong {
   padding: 30px;
 }
 
+@media (max-width: 991.98px) {
+  .profile__form-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 991.98px) {
+  .profile__form-group {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .profile__form-group {
+    margin-top: 16px;
+  }
+}
 .profile__form-control {
   margin-top: 30px;
   justify-content: flex-end;
+}
+@media (max-width: 991.98px) {
+  .profile__form-control {
+    margin-top: 20px;
+  }
 }
 .profile__form-btn {
   font-weight: 500;
@@ -4487,6 +4522,11 @@ b, strong {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.4444; /* 144.444% */
+}
+@media (max-width: 991.98px) {
+  .profile__form-label {
+    margin-bottom: 12px;
+  }
 }
 .profile__form-label--bottom {
   margin-bottom: 10px;

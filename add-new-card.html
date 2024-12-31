@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
 
 <head>
   <meta charset="UTF-8" />
@@ -34,7 +34,7 @@
       <div class="profile-container">
         <div class="row gy-xl-3">
           <!-- User -->
-          <div class="col-3 col-xl-4 col-lg-5 col-md-12">
+          <div class="col-3 col-xl-4 col-lg-5 d-md-none col-md-12">
             <div class="profile-info profile-info--no-padding">
               <aside class="profile__sidebar">
                 <div class="profile-user">
@@ -150,7 +150,7 @@
                 <div class="col-12">
                   <h2 class="profile-info__heading">
                     <a href="./profile.html" class="profile-info__heading-link">
-                      <img src="./assets/icons/arrow-left.svg" alt="" class="">
+                      <img src="./assets/icons/arrow-left.svg" alt="" class="icon">
                       Add credit or debit card
                     </a>
                   </h2>
@@ -158,9 +158,9 @@
                   <!-- Form -->
                    <form action="" class="form profile__form">
                     <!-- Form row 1 -->
-                    <div class="form__row">
+                    <div class="form__row profile__form-row">
                       <!-- First Name -->
-                      <div class="form__group">
+                      <div class="form__group profile__form-group">
                         <label for="firstName" class="form__label profile__form-label">First Name</label>
                         <div class="form__text-input">
                           <input pattern="[A-Za-z]+" type="text" name="firstName" id="firstName" class="form__input" placeholder="First Name" required/>
@@ -170,7 +170,7 @@
                       </div>
 
                       <!-- Last Name -->
-                      <div class="form__group">
+                      <div class="form__group profile__form-group">
                         <label for="lastName" class="form__label profile__form-label">Last Name</label>
                         <div class="form__text-input">
                           <input type="text" name="lastName" id="lastName" class="form__input" placeholder="Last Names" required/>
@@ -180,9 +180,9 @@
                       </div>
                     </div>
                     <!-- Form row 2 -->
-                    <div class="form__row">
+                    <div class="form__row profile__form-row">
                       <!-- Card Information -->
-                      <div class="form__group">
+                      <div class="form__group profile__form-group">
                         <label for="cardNumber" class="form__label profile__form-label">Card Information</label>
                         <div class="form__text-input">
                           <input pattern="\d{16}" type="text" name="cardNumber" id="cardNumber" class="form__input" placeholder="Card Number" required/>
@@ -192,7 +192,7 @@
                       </div>
 
                       <!-- Expiration Date -->
-                      <div class="form__group">
+                      <div class="form__group profile__form-group">
                         <label for="expirationDate" class="form__label profile__form-label">Expiration Date</label>
                         <div class="form__text-input">
                           <input  pattern="(0[1-9]|1[0-2])([\/\|])\d{2}" type="text" name="expirationDate" id="expirationDate" class="form__input" placeholder="MM/YY" required/>
@@ -202,9 +202,9 @@
                       </div>
                     </div>
                     <!-- Form row 3 -->
-                    <div class="form__row">
+                    <div class="form__row profile__form-row">
                       <!-- CVV -->
-                      <div class="form__group">
+                      <div class="form__group profile__form-group">
                         <label for="cvv" class="form__label profile__form-label">CVV</label>
                         <div class="form__text-input">
                           <input pattern="\d" type="text" name="cvv" id="cvv" class="form__input" placeholder="123" required/>
@@ -214,7 +214,7 @@
                       </div>
 
                       <!-- Phone number -->
-                      <div class="form__group">
+                      <div class="form__group profile__form-group">
                         <label for="phoneNumber" class="form__label profile__form-label">Phone Number</label>
                         <div class="form__text-input">
                           <input type="tel" pattern="\d{10}" name="phoneNumber" id="phoneNumber" class="form__input" placeholder="Phone Number" required/>
@@ -224,8 +224,8 @@
                       </div>
                     </div>
 
-                    <div class="form__group">
-                      <label for="default" class="form__label profile__form-label profile__form-label--bottom">Card Preferences</label>
+                    <div class="form__group profile__form-group">
+                      <label class="form__label profile__form-label profile__form-label--bottom">Card Preferences</label>
                       <label class="form__label-checkbox" for="default">
                       <input type="checkbox" name="default" id="default" class="form__checkbox d-none"/>
                       Set as default card
