@@ -180,6 +180,7 @@ function initJsToggle() {
     });
 }
 
+// Drop down navbar
 window.addEventListener("template-loaded", () => {
     const links = $$(".js-dropdown-list > li > a");
 
@@ -192,7 +193,7 @@ window.addEventListener("template-loaded", () => {
     });
 });
 
-
+// Tabs on Product details page
 window.addEventListener("template-loaded", () => {
     const tabsSelector = "product-tab__item";
     const contentsSelector = "product-tab__content";
@@ -215,23 +216,43 @@ window.addEventListener("template-loaded", () => {
     });
 });
 
-
+// Light/Dark Theme
 window.addEventListener("template-loaded", () => {
-    const switchBtn = document.querySelector("#switch-theme-btn");
-    if (switchBtn) {
-        switchBtn.onclick = function () {
-            const isDark = localStorage.dark === "true";
-            document.querySelector("html").classList.toggle("dark", !isDark);
-            localStorage.setItem("dark", !isDark);
-            switchBtn.querySelector("span").textContent = isDark ? "Dark mode" : "Light mode";
-        };
-        const isDark = localStorage.dark === "true";
-        switchBtn.querySelector("span").textContent = isDark ? "Light mode" : "Dark mode";
+    const STORAGE_KEY = 'dark';
+    const DARK_CLASS = 'dark';
+    const BUTTON_SELECTOR = '[id="switch-theme-btn"]';
+    
+    const switchBtns = document.querySelectorAll(BUTTON_SELECTOR);
+    
+    const updateButtonText = (isDark) => {
+        switchBtns.forEach(btn => {
+            const textSpan = btn.querySelector("span");
+            if (textSpan) {
+                textSpan.textContent = isDark ? "Light mode" : "Dark mode";
+            }
+        });
+    };
+    
+    const updateTheme = (isDark) => {
+        document.querySelector("html")?.classList.toggle(DARK_CLASS, isDark);
+        localStorage.setItem(STORAGE_KEY, isDark);
+        updateButtonText(isDark);
+    };
+    
+    if (switchBtns.length > 0) {
+        switchBtns.forEach(btn => {
+            btn.onclick = function() {
+                const isDark = localStorage.getItem(STORAGE_KEY) === "true";
+                updateTheme(!isDark);
+            };
+        });
+        
+        const initialDark = localStorage.getItem(STORAGE_KEY) === "true";
+        updateTheme(initialDark);
     }
 });
-
-const isDark = localStorage.dark === "true";
-document.querySelector("html").classList.toggle("dark", isDark);
+const isDark = localStorage.getItem('dark') === "true";
+document.querySelector("html")?.classList.toggle('dark', isDark);
 
 
 

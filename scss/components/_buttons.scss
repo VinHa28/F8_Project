@@ -1,3 +1,4 @@
+@use "../abstracts";
 
 // Filter Button
 .filter-btn {
@@ -92,7 +93,12 @@
 
 // Theme 
 .theme-btn {
+    @include abstracts.screen(lg) {
+        margin-right: -18px;
+    }
+    
     &__label {
+        max-width: 58px;
         position: relative;
         display: flex;
         align-items: center;

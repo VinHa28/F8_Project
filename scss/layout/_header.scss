@@ -206,6 +206,10 @@
   gap: 20px;
   @extend %flexItemsCenter;
 
+  @include abstracts.screen(lg) {
+    gap: 16px;
+  }
+
   @include abstracts.screen(md) {
     margin-left: 0;
 
@@ -355,6 +359,6 @@
   }
 
   &__icon{
-    width: 15 px;
+    width: 15px;
   }
 }

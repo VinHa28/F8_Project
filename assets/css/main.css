@@ -243,7 +243,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: "Gordita";
+  font-family: Lato, sans-serif;
   color: var(--text-color);
   background-color: var(--body-bg-color);
 }
@@ -1831,7 +1831,13 @@ b, strong {
   pointer-events: none;
 }
 
+@media (max-width: 991.98px) {
+  .theme-btn {
+    margin-right: -18px;
+  }
+}
 .theme-btn__label {
+  max-width: 58px;
   position: relative;
   display: flex;
   align-items: center;
@@ -3342,6 +3348,11 @@ b, strong {
   margin-left: auto;
   gap: 20px;
 }
+@media (max-width: 991.98px) {
+  .top-action {
+    gap: 16px;
+  }
+}
 @media (max-width: 767.98px) {
   .top-action {
     margin-left: 0;
@@ -3468,7 +3479,7 @@ b, strong {
   border-bottom: 1px solid var(--top-action-group-separate);
 }
 .user-menu__icon {
-  width: 15 px;
+  width: 15px;
 }
 
 .footer {
